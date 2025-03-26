@@ -212,6 +212,7 @@ Dispositivo 4 não pode ser ligado. Energia insuficiente.
 
 Dispositivo 5 não pode ser ligado. Energia insuficiente.
 
+**Resposta:**
 A alternativa D está correta. O primeiro dispostivo consome 300 de energia, então 900 de energia sobra; o segundo dispositivo consome 600 de energia, então dos 900 nós temos 300 agora; o terceiro dispositivo consome 500 de energia, usando toda nossa energia e deixando 200 da energia extra; como o resto dos dispositivos consomem mais do que isso o código retorna energia insuficiente.
 ______
 
@@ -227,7 +228,7 @@ C) O método update() renderiza todos os sprites na tela e garante que a física
 
 D) O método update() é chamado apenas uma vez após a criação da cena, sendo utilizado para configurar variáveis iniciais do jogo.
 
-Resposta:
+**Resposta:**
 A alternativa correta é a B. O método update, como no seu nome, atualiza as condições do jogo a cada frame, permitindo que sistemas de movimento por exemplo, sejam possíveis no Phaser.
 ______
 
@@ -243,7 +244,7 @@ C) Renderizar gráficos otimizados para jogos 2D e garantir uma taxa de quadros 
 
 D) Criar animações automáticas para sprites e objetos interativos sem necessidade de programação de movimentação.
 
-Resposta:
+**Resposta:**
 A alternativa correta é a A. O matter é o oposto do sistema de física que utilizamos o Arcade, o principal objetivo dele é simular a física do mundo real dentro do jogo, incluindo muito mais funções que o Arcade, porém ele é mais pesado e complicado que o Arcade.
 ______
 
@@ -251,8 +252,8 @@ ______
 
 **7)** Uma loja online deseja implementar um sistema de classificação de pedidos com base no valor total da compra. O sistema deve determinar a categoria de um pedido com as seguintes regras:
 
+**Resposta:**
 ```
-
 Pedidos abaixo de R$50,00 → "Frete não disponível!"
 
 Pedidos entre R$50,00 e R$199,99 (inclusive) → "Frete com custo adicional!"
@@ -260,7 +261,7 @@ Pedidos entre R$50,00 e R$199,99 (inclusive) → "Frete com custo adicional!"
 Pedidos de R$200,00 ou mais → "Frete grátis!"
 ```
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
-Resposta:
+**Resposta:**
 ```
 Valor da compra = Algum número
 
@@ -270,13 +271,13 @@ se (valor da compra > 50 e valor da compra < 199.99 )
     imprima "Frete com custo adicional!"
 senao
     Imprima "Frete grátis!"
-
 ```
 
 ______
 
 **8)** Considere a implementação da classe base Veiculo em um sistema de modelagem de veículos. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Carro e Moto, que herdam da classe Veiculo, adicionando atributos específicos e métodos para calcular o consumo de combustível de um carro e de uma moto, respectivamente.
 
+**Resposta:**
 ```
 Classe Veiculo:
 Atributos:
@@ -291,6 +292,7 @@ Método CalcularConsumo():
 Implementação genérica para cálculo de consumo, a ser sobrescrita pelas subclasses.
 Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo.
 
+**Resposta:**
 ```
 Classe Veiculo{
 Constructor (modelo,ano,gasolina,DistanciaDirigida){
@@ -323,8 +325,6 @@ meuCarro = Classe Carro ("BMW M2", "2018", 5, 10)
 meuCarro.CalcularConsumo();
 minhaMoto = Classe Moto ("Kawasaki", "2016", 10, 30)
 minhaMoto.CalcularConsumo();
-
-
 ```
 ______
 
@@ -339,6 +339,27 @@ Considere a fórumla de atualização velocidade:
     velocidade = velocidadeInicial - desaceleracao * tempo
 ```
 Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
+
+**Resposta:**
+```
+    velocidadeInicial = 5400;
+    desaceleracao = 150;
+    tempo = 1;
+    tempoMaximo = 40;
+    velocidade = velocidadeInicial - desaceleracao * tempo;
+
+    enquanto (velocidade > 5 e tempo < tempoMaximo) {
+        imprima(tempo, velocidade,);
+        tempo+1;
+        velocidade = velocidadeInicial - (desaceleracao * tempo); 
+    }
+
+    se (velocidade <= 5) {
+        imprima(Pouso seguro alcançado em, tempo, segundos);
+    } senão {
+        imprima(Tempo máximo atingido! Risco de desvio orbital);
+    }
+```
 ______
 
 **10)** Em um sistema de análise financeira, as operações de investimento de uma empresa podem ser representadas por matrizes, onde cada linha representa um tipo de investimento e cada coluna representa um período de tempo.
@@ -371,3 +392,21 @@ Escrever("Total de investimentos acumulados:")
 ImprimirMatriz(totalInvestimentos)  
 ```
 Agora, implemente a função MultiplicarMatrizesInvestimento(matrizA, matrizB), que multiplica as duas matrizes, simulando o efeito de diferentes fatores de crescimento e impacto financeiro nos investimentos ao longo do tempo.
+
+**Resposta:**
+```
+Função MultiplicarMatrizesInvestimento(matrizA, matrizB):  
+    Se colunas(matrizA) ≠ linhas(matrizB) então:  
+        Retornar "As matrizes não podem ser multiplicadas."  
+    Senão:  
+        linhas <- tamanho(matrizA)  
+        colunas <- tamanho(matrizA[0])  
+        matrizResultado <- novaMatriz(linhas, colunas)  
+
+        # Loop para percorrer cada elemento das matrizes e calcular a soma  
+        Para i de 0 até linhas-1 faça:  
+            Para j de 0 até colunas-1 faça:  
+                matrizResultado[i][j] <- matrizA[i][j] * matrizB[i][j]  
+
+        Retornar matrizResultado  
+```
