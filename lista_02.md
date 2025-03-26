@@ -244,7 +244,7 @@ C) Renderizar gráficos otimizados para jogos 2D e garantir uma taxa de quadros 
 D) Criar animações automáticas para sprites e objetos interativos sem necessidade de programação de movimentação.
 
 Resposta:
-A alternativa correta é a B. O matter é o oposto do sistema de física que utilizamos o Arcade, o principal objetivo dele é simular a física do mundo real dentro do jogo, incluindo muito mais funções que o Arcade, porém ele é mais pesado e complicado que o Arcade.
+A alternativa correta é a A. O matter é o oposto do sistema de física que utilizamos o Arcade, o principal objetivo dele é simular a física do mundo real dentro do jogo, incluindo muito mais funções que o Arcade, porém ele é mais pesado e complicado que o Arcade.
 ______
 
 # Questões dissertativas
@@ -283,13 +283,49 @@ Atributos:
 
 modelo
 ano
-Método Construtor(modelo, ano):
+Método Construtor(modelo, ano)
 
 Define os valores dos atributos modelo e ano com os valores passados como parâmetro.
 Método CalcularConsumo():
 ```
 Implementação genérica para cálculo de consumo, a ser sobrescrita pelas subclasses.
 Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo.
+
+```
+Classe Veiculo{
+Constructor (modelo,ano,gasolina,DistanciaDirigida){
+modelo
+ano
+gasolina
+DistanciaDirigida}
+
+
+Método CalcularConsumo(){
+    consumo = 0;
+    gasolina/DistanciaDirigida = consumo;
+    imprima(Consumo);
+}
+}
+
+Classe Moto Herda Veiculo{
+    metodo constructor (modelo,ano,gasolina,DistanciaDirigida){
+    Metodo super (modelo,ano,gasolina,DistanciaDirigida)
+    }
+}
+
+Classe Carro Herda Veiculo{
+    metodo constructor (modelo,ano,gasolina,DistanciaDirigida){
+    Metodo super (modelo,ano,gasolina,DistanciaDirigida)
+    }
+}
+
+meuCarro = Classe Carro ("BMW M2", "2018", 5, 10)
+meuCarro.CalcularConsumo();
+minhaMoto = Classe Moto ("Kawasaki", "2016", 10, 30)
+minhaMoto.CalcularConsumo();
+
+
+```
 ______
 
 **9)** Você é um cientista da NASA e está ajudando no desenvolvimento de um sistema de pouso para sondas espaciais em Marte. Seu objetivo é calcular o tempo necessário para que a sonda reduza sua velocidade até um nível seguro para pouso, considerando uma velocidade inicial de entrada na atmosfera marciana e uma taxa de desaceleração constante causada pelo atrito atmosférico e retrofoguetes.
