@@ -8,25 +8,6 @@
 
 <body>
     <script>
-
-        var velocidadeInicial = 5400;
-        var desaceleracao = 150;
-        var tempo = 1;
-        var tempoMaximo = 40;
-        var velocidade = velocidadeInicial - (desaceleracao * tempo);
-
-        while (velocidade > 5 && tempo < tempoMaximo) {
-            console.log("Tempo:", tempo, "- Velocidade:", velocidade, "m/s");
-            tempo++;
-            velocidade = velocidadeInicial - (desaceleracao * tempo); 
-        }
-
-        if (velocidade <= 5) {
-            console.log("Pouso seguro alcançado em", tempo, "segundos");
-        } else {
-            console.log("Tempo máximo atingido! Risco de desvio orbital");
-        }
-
     </script>
 </body>
 
