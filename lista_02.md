@@ -49,7 +49,7 @@ C) O código avalia a expressão booleana, imprime `true` e, em seguida, verific
 
 D) O código avalia a expressão booleana, imprime `false` e ordena os valores em ordem crescente.
 
-Resposta:
+### Resposta:
 A alternativa A esta correta. Primeiramente o código ira checar se os valores alimentados passam nos testes, retornando true or false. Logo depois a string valores é multiplicada e o produtos dos números é impresso.
 
 
@@ -114,7 +114,7 @@ C) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -20
 
 D) Ambas as funções exibirão: 'Seu crédito foi aprovado Saldo disponível: 500.'
 
-Resposta:
+### Resposta:
 A alternativa correta é a A. A única diferencça entre as funções é qual loop foi usado para somar sua compras, na primeira função um loop do while foi utilizado, enquanto na segunda um loop while foi utilizado. No final ambas iram retornar o valor de 400.
 ______
 
@@ -141,7 +141,7 @@ C) O código verifica se a idade está entre 18 e 60 anos e, se for, imprime "Vo
 
 D) O código verifica se a idade é menor de 18, entre 18 e 60 ou acima de 60, imprimindo uma mensagem específica para cada caso.
 
-Resposta:
+### Resposta:
 A alternativa B está correta. Ela descreve perfeitamente o que o código executa.
 ______
 
@@ -212,11 +212,11 @@ Dispositivo 4 não pode ser ligado. Energia insuficiente.
 
 Dispositivo 5 não pode ser ligado. Energia insuficiente.
 
-**Resposta:**
+### Resposta:
 A alternativa D está correta. O primeiro dispostivo consome 300 de energia, então 900 de energia sobra; o segundo dispositivo consome 600 de energia, então dos 900 nós temos 300 agora; o terceiro dispositivo consome 500 de energia, usando toda nossa energia e deixando 200 da energia extra; como o resto dos dispositivos consomem mais do que isso o código retorna energia insuficiente.
 ______
 
-**5)** Qual é a principal função do método update() em um jogo desenvolvido com Phaser.js?
+**5) Qual é a principal função do método update() em um jogo desenvolvido com Phaser.js?
 
 Escolha a opção que melhor descreve seu propósito:
 
@@ -228,7 +228,7 @@ C) O método update() renderiza todos os sprites na tela e garante que a física
 
 D) O método update() é chamado apenas uma vez após a criação da cena, sendo utilizado para configurar variáveis iniciais do jogo.
 
-**Resposta:**
+### Resposta:
 A alternativa correta é a B. O método update, como no seu nome, atualiza as condições do jogo a cada frame, permitindo que sistemas de movimento por exemplo, sejam possíveis no Phaser.
 ______
 
@@ -244,7 +244,7 @@ C) Renderizar gráficos otimizados para jogos 2D e garantir uma taxa de quadros 
 
 D) Criar animações automáticas para sprites e objetos interativos sem necessidade de programação de movimentação.
 
-**Resposta:**
+### Resposta:
 A alternativa correta é a A. O matter é o oposto do sistema de física que utilizamos o Arcade, o principal objetivo dele é simular a física do mundo real dentro do jogo, incluindo muito mais funções que o Arcade, porém ele é mais pesado e complicado que o Arcade.
 ______
 
@@ -261,7 +261,7 @@ Pedidos entre R$50,00 e R$199,99 (inclusive) → "Frete com custo adicional!"
 Pedidos de R$200,00 ou mais → "Frete grátis!"
 ```
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
-**Resposta:**
+### Resposta:
 ```
 Valor da compra = Algum número
 
@@ -277,7 +277,7 @@ ______
 
 **8)** Considere a implementação da classe base Veiculo em um sistema de modelagem de veículos. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Carro e Moto, que herdam da classe Veiculo, adicionando atributos específicos e métodos para calcular o consumo de combustível de um carro e de uma moto, respectivamente.
 
-**Resposta:**
+### Resposta:
 ```
 Classe Veiculo:
 Atributos:
@@ -292,7 +292,7 @@ Método CalcularConsumo():
 Implementação genérica para cálculo de consumo, a ser sobrescrita pelas subclasses.
 Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo.
 
-**Resposta:**
+### Resposta:
 ```
 Classe Veiculo{
 Constructor (modelo,ano,gasolina,DistanciaDirigida){
@@ -340,7 +340,7 @@ Considere a fórumla de atualização velocidade:
 ```
 Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
 
-**Resposta:**
+### Resposta:
 ```
     velocidadeInicial = 5400;
     desaceleracao = 150;
@@ -393,20 +393,21 @@ ImprimirMatriz(totalInvestimentos)
 ```
 Agora, implemente a função MultiplicarMatrizesInvestimento(matrizA, matrizB), que multiplica as duas matrizes, simulando o efeito de diferentes fatores de crescimento e impacto financeiro nos investimentos ao longo do tempo.
 
-**Resposta:**
+### Resposta:
 ```
 Função MultiplicarMatrizesInvestimento(matrizA, matrizB):  
     Se colunas(matrizA) ≠ linhas(matrizB) então:  
         Retornar "As matrizes não podem ser multiplicadas."  
     Senão:  
-        linhas <- tamanho(matrizA)  
-        colunas <- tamanho(matrizA[0])  
-        matrizResultado <- novaMatriz(linhas, colunas)  
+        linhasResultado <- tamanho(matrizA)  
+        colunasResultado <- tamanho(matrizB[0])  
+        matrizResultado <- novaMatriz(linhasResultado, colunasResultado)  
 
-        # Loop para percorrer cada elemento das matrizes e calcular a soma  
-        Para i de 0 até linhas-1 faça:  
-            Para j de 0 até colunas-1 faça:  
-                matrizResultado[i][j] <- matrizA[i][j] * matrizB[i][j]  
+        Para i de 0 até linhasResultado - 1 faça:  
+            Para j de 0 até colunasResultado - 1 faça:  
+                matrizResultado[i][j] <- 0  
+                Para k de 0 até tamanho(matrizA[0]) - 1 faça:  
+                    matrizResultado[i][j] <- matrizResultado[i][j] + (matrizA[i][k] * matrizB[k][j])  
 
         Retornar matrizResultado  
 ```
